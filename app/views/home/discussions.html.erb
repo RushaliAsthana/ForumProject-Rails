@@ -1,0 +1,331 @@
+<div x-data="{ showModal1: false, showModal2: false, showModal3: false }" :class="{'overflow-y-hidden': showModal1 || showModal2 || showModal3}" class="bg-gray-100" >
+
+  <section class="container mx-auto max-w-7xl">
+   
+   <div class="md:flex md:flex-wrap">
+      <div class="lg:w-1/4 p-4 lg:block hidden">
+        <div class="items-center mb-2 fixed">
+          <div class='bg-gray-100 height'>
+              <a href="#"><div class='flex items-center'>
+                  <div>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 border-blue-400 text-blue-500 mb-4 hover:bg-blue-100 ml-2 border-2 w-48 h-10 text-sm text-left font-semibold" href=""><i class="fa fa-clone ml-3 mr-3 fa-md"></i>All Threads</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-star ml-3 mr-2 fa-sm"></i>Popular this week</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-star ml-3 mr-2 fa-sm"></i>Popular all time</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-check-circle ml-3 mr-2 fa-sm"></i>Solved</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-times-circle ml-3 mr-2 fa-sm"></i>Unsolved</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-reply ml-3 mr-2 fa-sm"></i>No Replies yet</button><br>
+                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-clipboard ml-3 mr-3 fa-sm"></i>Leaderboard</button><br>
+                  </div>
+                  </div>
+              </a>
+          </div>
+        </div>
+      </div>
+   <div class="lg:w-3/4 py-1.5">
+   <div class="mx-auto  text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+                  <div class="md:flex md:flex-wrap md:flex-row md:items-center md:justify-between px-4">
+                     <div class="flex flex-row items-center justify-between mb-2.5">
+                        <select class="cursor-pointer p-1 mr-16 border-4 text-sm font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+                           <option>All Tags</option>
+                           <option>Assistance</option>
+                           <option>Eloquent</option>
+                           <option>Envoyer</option>
+                           <option>Feedback</option>
+                           <option>Java Script</option>
+                           <option>Luman</option>
+                           <option>Mix</option>
+                           <option>Requests</option>
+                           <option>Server</option>
+                           <option>Spark</option>
+                           <option>Vue</option>
+                        </select>
+                        <select class="xl:invisible lg:invisible visible cursor-pointer p-1 border-4 text-sm w-32 font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+                           <option>latest</option>
+                           <option>Popular this week</option>
+                           <option>Popular all time</option>
+                           <option>Solved</option>
+                           <option>unsolved</option>
+                           <option>No replies yet</option>
+                        </select>
+                     </div>
+                     <nav class="flex-col flex-grow md:flex md:justify-end md:flex-row">
+                     <div class="relative text-gray-600 inline-flex flex-wrap">
+                        <div class="relative mr-4">
+                           <input type="text" class="h-10 pr-8 pl-5 rounded-full z-0  bg-gray-200 mt-2 focus:shadow focus:outline-none" placeholder="Search anything...">
+                           <div class="absolute top-4 right-3"> <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i> </div>
+                        </div>
+                        <button @click="showModal1 = true" class="rounded-full hover:border-blue-400 mb-4 mt-2 hover:bg-blue-700 bg-blue-500 border h-10 text-sm text-left text-white font-semibold focus:outline-none" href=""><span class="p-2"> <i class="fas fa-plus"></i> New Discussion</span></button><br>  
+                     </div>
+                  </div>
+               </div>
+
+
+   <div class=" w-full mx-auto">
+                  <div class="w-full">
+                     <div class="overflow-hidden rounded">
+                        <div role="presentation">
+                           <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4">
+                              <div class="m-2">
+                                 <div class="flex items-center">
+                                    <div class="mr-2">                
+                                       <a href="/hagnerd">          
+                                       <img class="rounded-full w-8" src="https://res.cloudinary.com/practicaldev/image/fetch/s---dcV6iX4--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/112962/b1373942-b945-4d16-af76-c448e080d14a.jpeg" alt="hagnerd profile" loading="lazy">        
+                                       </a>      
+                                    </div>
+                                    <div>
+                                       <p>          
+                                          <a href="/hagnerd" class="text font-semibold">Matt Hagner</a>                  
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pl-12 md:pl-10 xs:pl-10">
+                                 <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
+                                    <a href="reply_page.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
+                                    Best way to remove columns from table [ Live Project ]
+                                    </a>
+                                 </h2>
+                                 <p class="mb-4 xl:ml-2 lg:ml-2 md:ml-2">Hello guys, I'm a little bit worried. what is the best way to remove two foreign keys columns from a table on a live project. [ My project is hosted on an Ubuntu Linux server by Digitalocean. and I use SSH to run migrations on live. I know how to a...</p>
+                                 <div class="flex justify-between items-center">
+                                    <div class="flex">
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd" class="py-1 text-gray-400 text-sm rounded">
+                                       <i class="far fa-eye visible"></i>
+                                       195<span class="hidden md:inline">&nbsp;reactions</span>
+                                       </a>
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd#comments" class="py-1 pl-4 text-gray-400 text-sm rounded">
+                                          <svg class="inline fill-current" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path>
+                                          </svg>
+                                          20<span class="hidden md:inline">&nbsp;comments</span>
+                                       </a>
+                                    </div>
+                                    <div class="flex items-center">                
+                                       <small class="mr-2 text-gray-400">replied 1 min ago</small>             
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div role="presentation">
+                           <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
+                              <div class="m-2">
+                                 <div class="flex items-center">
+                                    <div class="mr-2">                
+                                       <a href="/hagnerd">          
+                                       <img class="rounded-full w-8" src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/crysis-3-keyart.jpg.adapt.crop1x1.767p.jpg" alt="hagnerd profile" loading="lazy">        
+                                       </a>        
+                                    </div>
+                                    <div>
+                                       <p>          
+                                          <a href="/hagnerd" class="text font-semibold">Steve Keri</a>                  
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pl-12 md:pl-10 xs:pl-10">
+                                 <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
+                                    <a href="reply_page.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
+                                    What is the best practice to persist auth user info in SPA?
+                                    </a>
+                                 </h2>
+                                 <p class="mb-4 xl:ml-2 lg:ml-2 md:ml-2">What is the best practice to persist auth user info in SPA? Is it a good practice to store it in local storage( i.g. localStorage.getItem('authUser') ), or widow object ( i.g. window.user) ? Should I send a request to the server every time I want to...</p>
+                                 <div class="flex justify-between items-center">
+                                    <div class="flex">
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd" class="py-1 text-gray-400 text-sm rounded">
+                                       <i class="far fa-eye visible"></i>
+                                       120<span class="hidden md:inline">&nbsp;reactions</span>
+                                       </a>
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd#comments" class="py-1 pl-4 text-gray-400 text-sm rounded">
+                                          <svg class="inline fill-current" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path>
+                                          </svg>
+                                          19<span class="hidden md:inline">&nbsp;comments</span>
+                                       </a>
+                                    </div>
+                                    <div class="flex items-center">                
+                                       <small class="mr-2 text-gray-400">replied 8 min ago</small>             
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div role="presentation">
+                           <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
+                              <div class="m-2">
+                                 <div class="flex items-center">
+                                    <div class="mr-2">                
+                                       <a href="/hagnerd">          
+                                       <img class="rounded-full w-8" src="https://res.cloudinary.com/practicaldev/image/fetch/s---dcV6iX4--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/112962/b1373942-b945-4d16-af76-c448e080d14a.jpeg" alt="hagnerd profile" loading="lazy">        
+                                       </a>      
+                                    </div>
+                                    <div>
+                                       <p>          
+                                          <a href="/hagnerd" class="text font-semibold">Matt Hagner</a>                  
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pl-12 md:pl-10 xs:pl-10">
+                                 <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700 xl:ml-2 lg:ml-2">
+                                    <a href="reply_page.html" id="article-link-151230">
+                                    Trying to get Logic out of Blade Nested relationship
+                                    </a>
+                                 </h2>
+                                 <p class="mb-4 xl:ml-2 lg:ml-2 md:ml-2">I have an app that tracks training requirement compliance by Division. I have Divisions that have a many to many relationship with requirements. Division Model public function requirements() { return $this->belongsToMany('App\Requirem...</p>
+                                 <div class="flex justify-between items-center">
+                                    <div class="flex">
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd" class="py-1 text-gray-400 text-sm rounded">
+                                       <i class="far fa-eye visible"></i>
+                                       125<span class="hidden md:inline">&nbsp;reactions</span>
+                                       </a>
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd#comments" class="py-1 pl-4 text-gray-400 text-sm rounded">
+                                          <svg class="inline fill-current" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path>
+                                          </svg>
+                                          18<span class="hidden md:inline">&nbsp;comments</span>
+                                       </a>
+                                    </div>
+                                    <div class="flex items-center">                
+                                       <small class="mr-2 text-gray-400">replied 23 min ago</small>             
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div role="presentation">
+                           <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
+                              <div class="m-2">
+                                 <div class="flex items-center">
+                                    <div class="mr-2">                
+                                       <a href="/hagnerd">          
+                                       <img class="rounded-full w-8" src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/crysis-3-keyart.jpg.adapt.crop1x1.767p.jpg" alt="hagnerd profile" loading="lazy">        
+                                       </a>      
+                                    </div>
+                                    <div>
+                                       <p>          
+                                          <a href="/hagnerd" class="text font-semibold">Matt Hagner</a>                  
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pl-12 md:pl-10 xs:pl-10">
+                                 <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
+                                    <a href="reply_page.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
+                                    MySQL or Eloquent ELOQUENT 18
+                                    </a>
+                                 </h2>
+                                 <p class="mb-4 lg:ml-2 md:ml-2 xl:ml-2">I've been using MySQL for a while now and am pretty comfortable with it. I find myself using DB::unprepared() for Stored Procedures with a lot of the complex stuff just letting the database do its thing. Is there an advantage to using Eloquent in La...</p>
+                                 <div class="flex justify-between items-center">
+                                    <div class="flex">
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd" class="py-1 text-gray-400 text-sm rounded">
+                                       <i class="far fa-eye visible"></i>
+                                       98<span class="hidden md:inline">&nbsp;reactions</span>
+                                       </a>
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd#comments" class="py-1 pl-4 text-gray-400 text-sm rounded">
+                                          <svg class="inline fill-current" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path>
+                                          </svg>
+                                          13<span class="hidden md:inline">&nbsp;comments</span>
+                                       </a>
+                                    </div>
+                                    <div class="flex items-center">                
+                                       <small class="mr-2 text-gray-400">replied 7 min ago</small>             
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div role="presentation">
+                           <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
+                              <div class="m-2">
+                                 <div class="flex items-center">
+                                    <div class="mr-2">                
+                                       <a href="/hagnerd">          
+                                       <img class="rounded-full w-8" src="https://res.cloudinary.com/practicaldev/image/fetch/s---dcV6iX4--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/112962/b1373942-b945-4d16-af76-c448e080d14a.jpeg" alt="hagnerd profile" loading="lazy">        
+                                       </a>      
+                                    </div>
+                                    <div>
+                                       <p>          
+                                          <a href="/hagnerd" class="text font-semibold">Matt Hagner</a>                  
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pl-12 md:pl-10 xs:pl-10">
+                                 <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
+                                    <a href="reply_page.html" id="article-link-151230" class="xl:ml-2 md:ml-2 lg:ml-2">
+                                    Unable to install any package in laravel after Downloading latest xampp
+                                    </a>
+                                 </h2>
+                                 <p class="mb-4 xl:ml-2 md:ml-2 lg:ml-2">Hi I recently downloaded the latest xampp and shifted all my project to it. After that I cannot able to install any new packages. I am getting errors Your requirements could not be resolved to an installable set of packages. Problem 1 - Root...</p>
+                                 <div class="flex justify-between items-center">
+                                    <div class="flex">
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd" class="py-1 text-gray-400 text-sm rounded">
+                                       <i class="far fa-eye visible"></i>
+                                       101<span class="hidden md:inline">&nbsp;reactions</span>
+                                       </a>
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd#comments" class="py-1 pl-4 text-gray-400 text-sm rounded">
+                                          <svg class="inline fill-current" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path>
+                                          </svg>
+                                          12<span class="hidden md:inline">&nbsp;comments</span>
+                                       </a>
+                                    </div>
+                                    <div class="flex items-center">                
+                                       <small class="mr-2 text-gray-400">replied 5 min ago</small>             
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div role="presentation">
+                           <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
+                              <div class="m-2">
+                                 <div class="flex items-center">
+                                    <div class="mr-2">                
+                                       <a href="/hagnerd">          
+                                       <img class="rounded-2xl w-8" src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/crysis-3-keyart.jpg.adapt.crop1x1.767p.jpg" alt="hagnerd profile" loading="lazy">        
+                                       </a>      
+                                    </div>
+                                    <div>
+                                       <p>          
+                                          <a href="/hagnerd" class="text font-semibold">Matt Hagner</a>                  
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="pl-12 md:pl-10 xs:pl-10">
+                                 <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
+                                    <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd" id="article-link-151230" class="xl:ml-2 md:ml-2 lg:ml-2">
+                                    Display images stored in S3 in blade files
+                                    </a>
+                                 </h2>
+                                 <p class="mb-4 xl:ml-2 md:ml-2 lg:ml-2">Hi, I am trying to store images in S3 and then display them on blade files in my application however I am getting a 403 Forbidden error when trying to load the image. My IAM user has full access to S3 and I have uploaded the image through the applica...</p>
+                                 <div class="flex justify-between items-center">
+                                    <div class="flex">
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd" class="py-1 text-gray-400 text-sm rounded">
+                                       <i class="far fa-eye visible"></i>
+                                       90<span class="hidden md:inline">&nbsp;reactions</span>
+                                       </a>
+                                       <a href="/hagnerd/setting-up-tailwind-with-create-react-app-4jd#comments" class="py-1 pl-4 text-gray-400 text-sm rounded">
+                                          <svg class="inline fill-current" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z"></path>
+                                          </svg>
+                                          11<span class="hidden md:inline">&nbsp;comments</span>
+                                       </a>
+                                    </div>
+                                    <div class="flex items-center">                
+                                       <small class="mr-2 text-gray-400">replied 14 min ago</small>             
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+    </div>
+   </div>
+
+  </section> 
+</div>
