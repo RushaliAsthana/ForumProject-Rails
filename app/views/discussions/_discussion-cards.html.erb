@@ -1,69 +1,4 @@
-<div x-data="{ showModal1: false, showModal2: false, showModal3: false }" :class="{'overflow-y-hidden': showModal1 || showModal2 || showModal3}" class="bg-gray-100" >
-
-  <section class="container mx-auto max-w-7xl">
-   
-   <div class="md:flex md:flex-wrap">
-      <div class="lg:w-1/4 p-4 lg:block hidden">
-        <div class="items-center mb-2 fixed">
-          <div class='bg-gray-100 height'>
-              <a href="#"><div class='flex items-center'>
-                  <div>
-                    <button class="focus:outline-none rounded-full hover:border-blue-400 border-blue-400 text-blue-500 mb-4 hover:bg-blue-100 ml-2 border-2 w-48 h-10 text-sm text-left font-semibold" href=""><i class="fa fa-clone ml-3 mr-3 fa-md"></i>All Threads</button><br>
-                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-star ml-3 mr-2 fa-sm"></i>Popular this week</button><br>
-                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-star ml-3 mr-2 fa-sm"></i>Popular all time</button><br>
-                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-check-circle ml-3 mr-2 fa-sm"></i>Solved</button><br>
-                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-times-circle ml-3 mr-2 fa-sm"></i>Unsolved</button><br>
-                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-reply ml-3 mr-2 fa-sm"></i>No Replies yet</button><br>
-                    <button class="focus:outline-none rounded-full hover:border-blue-400 mb-4 hover:bg-gray-100 ml-2 border-2 w-48 h-10 text-sm text-left text-gray-600 hover:text-blue-500 font-semibold" href=""><i class="fa fa-clipboard ml-3 mr-3 fa-sm"></i>Leaderboard</button><br>
-                  </div>
-                  </div>
-              </a>
-          </div>
-        </div>
-      </div>
-   <div class="lg:w-3/4 py-1.5">
-   <div class="mx-auto  text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
-                  <div class="md:flex md:flex-wrap md:flex-row md:items-center md:justify-between px-4">
-                     <div class="flex flex-row items-center justify-between mb-2.5">
-                        <select class="cursor-pointer p-1 mr-16 border-4 text-sm font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
-                           <option>All Tags</option>
-                           <option>Assistance</option>
-                           <option>Eloquent</option>
-                           <option>Envoyer</option>
-                           <option>Feedback</option>
-                           <option>Java Script</option>
-                           <option>Luman</option>
-                           <option>Mix</option>
-                           <option>Requests</option>
-                           <option>Server</option>
-                           <option>Spark</option>
-                           <option>Vue</option>
-                        </select>
-                        <select class="xl:invisible lg:invisible visible cursor-pointer p-1 border-4 text-sm w-32 font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
-                           <option>latest</option>
-                           <option>Popular this week</option>
-                           <option>Popular all time</option>
-                           <option>Solved</option>
-                           <option>unsolved</option>
-                           <option>No replies yet</option>
-                        </select>
-                     </div>
-                     <nav class="flex-col flex-grow md:flex md:justify-end md:flex-row">
-                     <div class="relative text-gray-600 inline-flex flex-wrap">
-                        <div class="relative mr-4">
-                           <input type="text" class="h-10 pr-8 pl-5 rounded-full z-0  bg-gray-200 mt-2 focus:shadow focus:outline-none" placeholder="Search anything...">
-                           <div class="absolute top-4 right-3"> <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i> </div>
-                        </div>
-                        <button @click="showModal1 = true" class="rounded-full hover:border-blue-400 mb-4 mt-2 hover:bg-blue-700 bg-blue-500 border h-10 text-sm text-left text-white font-semibold focus:outline-none" href=""><span class="p-2"> <i class="fas fa-plus"></i> New Discussion</span></button><br>  
-                     </div>
-                  </div>
-               </div>
-
-
-   <div class=" w-full mx-auto">
-                  <div class="w-full">
-                     <div class="overflow-hidden rounded">
-                        <div role="presentation">
+ <div role="presentation">
                            <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4">
                               <div class="m-2">
                                  <div class="flex items-center">
@@ -81,7 +16,7 @@
                               </div>
                               <div class="pl-12 md:pl-10 xs:pl-10">
                                  <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 leading-7 text-gray-700">
-                                    <a href="reply_page.html" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
+                                    <a href="/reply" id="article-link-151230" class="xl:ml-2 lg:ml-2 md:ml-2">
                                     Best way to remove columns from table [ Live Project ]
                                     </a>
                                  </h2>
@@ -106,6 +41,7 @@
                               </div>
                            </div>
                         </div>
+
                         <div role="presentation">
                            <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
                               <div class="m-2">
@@ -149,6 +85,7 @@
                               </div>
                            </div>
                         </div>
+
                         <div role="presentation">
                            <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
                               <div class="m-2">
@@ -192,7 +129,7 @@
                               </div>
                            </div>
                         </div>
-                        <div role="presentation">
+                         <div role="presentation">
                            <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
                               <div class="m-2">
                                  <div class="flex items-center">
@@ -235,6 +172,8 @@
                               </div>
                            </div>
                         </div>
+
+                        
                         <div role="presentation">
                            <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
                               <div class="m-2">
@@ -278,6 +217,7 @@
                               </div>
                            </div>
                         </div>
+
                         <div role="presentation">
                            <div class="bg-white p-1.5 shadow-lg rounded-lg mx-4 mt-6">
                               <div class="m-2">
@@ -321,11 +261,4 @@
                               </div>
                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
-    </div>
-   </div>
-
-  </section> 
-</div>
+                        </div>

@@ -3,10 +3,4 @@ class HomeController < ApplicationController
   def index
   end
 
-  def discussions
-  end
-
-  def reply_page
-  end
-
 end

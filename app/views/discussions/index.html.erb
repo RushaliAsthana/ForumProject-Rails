@@ -1,0 +1,16 @@
+<div x-data="{ showModal1: false, showModal2: false, showModal3: false }" :class="{'overflow-y-hidden': showModal1 || showModal2 || showModal3}" class="bg-gray-100" >
+   <section class="container mx-auto max-w-7xl">
+      <%= render partial: 'sidebar-filter' %>
+      <div class="lg:w-3/4 py-1.5">
+         <%= render partial: 'topbar' %>
+         <div class=" w-full mx-auto">
+            <div class="w-full">
+               <div class="overflow-hidden rounded">
+                  <%= render partial: 'discussion-cards' %>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <%= render partial: '/partials/discussions-modal' %>
+</div>
